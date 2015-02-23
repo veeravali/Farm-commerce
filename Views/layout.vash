@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>Welcome to Farm-Commerce </title>
+    <link href="css/site.css" rel="stylesheet"></link>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        
+          <a href="/" class="navbar-brand">Farm-Commerce</a>
+    
+      
+
+        @if(model.user){
+          @model.user.name
+        }
+     
+      <ul class="nav nav-pills navbar-right">
+
+        @if(model.user){
+
+        <li>
+        <a href="">Orders</a>
+
+      </li>
+      <li>
+        <a href="">MarketPlace</a>
+      </li>
+      <li>
+        <a href="">Vendors</a>
+      </li>
+      <li>
+        <a href="">SupplyChain</a>
+      </li>
+        <li>
+          <a href="/Users">Users</a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="/login">Logout</a>
+        </li>
+        }
+        
+        
+        @if(!model.user){
+        <li>
+          <a href="/Register">Register</a>
+        </li>
+        
+        <li>
+          <a href="/login">login</a>
+        </li>
+        }
+    
+      </ul>
+      
+     
+    </div>
+      </div>
+     <div class="container"> @html.block("body")</div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/underscore/underscore.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

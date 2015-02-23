@@ -1,0 +1,51 @@
+﻿@html.extend('layout',function(model){
+@html.block("body",function(model){
+
+<h3>@model.title<h3>
+
+@if(model.message){
+<p> @model.message</p>
+}
+<form action="/register" method="post" class="form-horizontal">
+
+<div class="form-group">
+	<label class="control-label col-md-2">Your Name</label>
+	<div class=" col-md-4">
+	<input type="text" name="username" class="form-control" placeholder="your name"/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="control-label col-md-2">Mobile </label>
+	<div class=" col-md-4">
+	<input type="text" name="mobile" class="form-control " placeholder="10 digits mobile number"/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="control-label col-md-2">Email</label>
+	<div class=" col-md-4">
+	<input type="text" name="email" class="form-control" placeholder="email@domain.com"/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="control-label col-md-2">Password</label>
+	<div class=" col-md-4">
+	<input type="password" name="password" class="form-control" placeholder="password"/>
+	</div>
+</div>
+
+<div class="form-group">
+	
+	<input type="submit" class="btn btn-lg btn-primary col-md-offset-2 col-md-4" value="register"/>
+	
+</div>
+<div class="form-group">
+	<p class="text-muted"> Or <a href="/login">login</a> if you already have Account</p>
+</div>
+
+</form>
+
+})
+})

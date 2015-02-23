@@ -1,0 +1,43 @@
+﻿@html.extend('layout',function(model){
+@html.block("body",function(model){
+
+
+	<div class = "row well well-lg">
+		<div class="col-md-6">
+			<h1>Welcome to Farm-Commerce</h1>
+			<p>Farmers web portal</p>
+
+			<button type="button" class="btn btn-lg btn-default">Join</button>
+			<button type="button" class="btn btn-lg btn-success">Sign-in</button>
+
+		</div>
+		<div class="col-md-6" visible-md visible-lg>
+		<img src="/images/Farm1.jpg" alt="Farm-Group"></img>
+		</div>
+	</div>
+
+	<div class="row text-center features">
+
+		<div class="col-sm-4 col-xs-12" >
+			<i class="glyphicon glyphicon-euro"></i>
+			<h1>Save Money</h1>
+			<p>We have eliminated all the brokers, distributors, We help farmers directly purchasing from manufaturer for a whole sale price</p>
+		</div>
+		<div class="col-sm-4 col-xs-6">
+			<i class="glyphicon glyphicon-ok-circle"></i>
+			<h1>Quality</h1>
+			<p>We will ensure the quality of the product and services, As we  directly purchase from manufacturer, We do involve in the Quality check process.</p>
+
+		</div>
+		<div class="col-md-4 col-xs-6">
+			<i class="glyphicon glyphicon-road"></i>
+			<h1>Delivery</h1>
+			<p> Enhanced hassle free delivery system through supply chain from manufacturer to the farmer on time </p>
+		</div>
+	</div>
+
+
+})
+
+
+})
